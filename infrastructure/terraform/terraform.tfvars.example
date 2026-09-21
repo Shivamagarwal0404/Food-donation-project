@@ -1,0 +1,35 @@
+# =============================================================================
+# FoodShare — terraform.tfvars.example
+# Instructions:
+# 1. Copy this file to `terraform.tfvars`:
+#    cp terraform.tfvars.example terraform.tfvars
+# 2. Fill in your actual values below.
+# 3. NEVER commit terraform.tfvars or any credentials to version control.
+# =============================================================================
+
+# --- General ---
+aws_region   = "ap-south-1"       # AWS region (Mumbai)
+project_name = "foodshare"
+environment  = "production"       # "staging" or "production"
+
+# --- VPC & Subnets (Two AZs required for RDS DB subnet group) ---
+vpc_cidr             = "10.0.0.0/16"
+public_subnet_a_cidr = "10.0.1.0/24"
+public_subnet_b_cidr = "10.0.2.0/24"
+availability_zone_a  = "ap-south-1a"
+availability_zone_b  = "ap-south-1b"
+
+# --- EC2 Web / App Server ---
+ec2_instance_type = "t3.small"
+ec2_ami_id        = "ami-0f5ee92e2d63afc18" # Ubuntu 22.04 LTS (ap-south-1)
+key_pair_name     = "foodshare-key"
+allowed_ssh_cidr  = "117.99.94.41/32" # Restrict to your public IP for security
+
+# --- RDS PostgreSQL Database ---
+db_name                  = "foodshare_db"
+db_username              = "foodshare_user"
+db_password              = "CHANGE_ME_STRONG_DB_PASSWORD" # Must be at least 8 characters
+db_instance_class        = "db.t3.micro"
+db_allocated_storage     = 20
+db_max_allocated_storage = 50
+db_engine_version        = "15"

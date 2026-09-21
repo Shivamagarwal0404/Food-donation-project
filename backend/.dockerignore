@@ -1,0 +1,29 @@
+# =============================================================================
+# FoodShare — Backend .dockerignore
+# =============================================================================
+
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.venv
+venv
+.env
+.env.*
+!.env.example
+!.env.prod.example
+*.pem
+*.key
+db.sqlite3
+test_db.sqlite3
+*.sqlite3
+media/
+staticfiles/
+.pytest_cache
+htmlcov
+.coverage
+*.log
+.DS_Store
+.git
+.vscode
+.idea

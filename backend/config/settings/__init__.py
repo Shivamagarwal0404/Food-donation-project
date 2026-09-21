@@ -1,0 +1,3 @@
+"""
+FoodShare — Settings package.
+"""

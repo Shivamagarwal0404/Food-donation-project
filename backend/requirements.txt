@@ -1,0 +1,38 @@
+# =============================================================================
+# FoodShare — Backend Python dependencies
+# =============================================================================
+
+# --- Django core ---
+Django==5.0.6
+djangorestframework==3.15.2
+django-cors-headers==4.4.0
+
+# --- Authentication ---
+djangorestframework-simplejwt==5.3.1
+
+# --- Database ---
+psycopg2-binary==2.9.10
+
+# --- Images ---
+Pillow==10.4.0
+
+# --- AWS S3 (production media storage) ---
+django-storages==1.14.3
+boto3==1.34.145
+
+# --- Environment variables ---
+python-decouple==3.8
+
+# --- Filtering & search ---
+django-filter==24.2
+
+# --- Production WSGI server ---
+gunicorn==22.0.0
+
+# --- Utilities ---
+python-slugify==8.0.4
+
+# --- Development / Testing ---
+pytest==8.3.2
+pytest-django==4.8.0
+factory-boy==3.3.1
